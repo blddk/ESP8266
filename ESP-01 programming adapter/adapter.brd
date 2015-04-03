@@ -120,17 +120,14 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="30.31" x2="0" y2="1" width="0" layer="20"/>
+<wire x1="0" y1="30" x2="0" y2="1" width="0" layer="20"/>
 <wire x1="0" y1="1" x2="1" y2="0" width="0" layer="20" curve="90"/>
 <wire x1="1" y1="0" x2="26" y2="0" width="0" layer="20"/>
 <wire x1="26" y1="0" x2="27" y2="1" width="0" layer="20" curve="90"/>
-<wire x1="27" y1="1" x2="27" y2="30.31" width="0" layer="20"/>
-<wire x1="27" y1="30.31" x2="26" y2="31.31" width="0" layer="20" curve="90"/>
-<wire x1="26" y1="31.31" x2="1" y2="31.31" width="0" layer="20"/>
-<wire x1="1" y1="31.31" x2="0" y2="30.31" width="0" layer="20" curve="90"/>
-<wire x1="14.77" y1="30" x2="15.77" y2="30" width="0.254" layer="25"/>
-<wire x1="12.23" y1="30" x2="13.23" y2="30" width="0.254" layer="25"/>
-<wire x1="12.73" y1="29.5" x2="12.73" y2="30.5" width="0.254" layer="25"/>
+<wire x1="27" y1="1" x2="27" y2="30" width="0" layer="20"/>
+<wire x1="27" y1="30" x2="26" y2="31" width="0" layer="20" curve="90"/>
+<wire x1="26" y1="31" x2="1" y2="31" width="0" layer="20"/>
+<wire x1="1" y1="31" x2="0" y2="30" width="0" layer="20" curve="90"/>
 </plain>
 <libraries>
 <library name="pinhead">
@@ -613,14 +610,14 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="14.695" y="6.62" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="IC1" library="SparkFun-PowerIC" package="78XXL" value="" x="21" y="16" rot="R180"/>
-<element name="V-SEL" library="pinhead" package="1X03" value="" x="5.12" y="27.5" smashed="yes">
-<attribute name="VALUE" x="1.31" y="24.325" size="1.27" layer="27"/>
+<element name="V-SEL" library="pinhead" package="1X03" value="" x="5.12" y="29" smashed="yes">
+<attribute name="VALUE" x="1.31" y="25.825" size="1.27" layer="27"/>
 </element>
-<element name="VIN" library="pinhead" package="1X02" value="" x="14" y="27.5" smashed="yes">
-<attribute name="VALUE" x="11.46" y="24.325" size="1.27" layer="27"/>
+<element name="VIN" library="pinhead" package="1X02" value="" x="24.5" y="27.75" smashed="yes" rot="R270">
+<attribute name="VALUE" x="21.325" y="30.29" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="JP2" library="pinhead" package="1X04" value="" x="11.46" y="23.75" smashed="yes">
-<attribute name="VALUE" x="6.38" y="20.575" size="1.27" layer="27"/>
+<element name="JP2" library="pinhead" package="1X04" value="" x="11.46" y="24" smashed="yes">
+<attribute name="VALUE" x="6.38" y="20.825" size="1.27" layer="27"/>
 </element>
 <element name="R1" library="SparkFun-Resistors" package="AXIAL-0.3" value="" x="6.25" y="17" smashed="yes" rot="R90">
 <attribute name="VALUE" x="6.631" y="14.968" size="1.016" layer="21" font="vector" ratio="15" rot="R90"/>
@@ -637,13 +634,13 @@ design rules under a new name.</description>
 <vertex x="28" y="32.31"/>
 <vertex x="28" y="-1"/>
 </polygon>
-<contactref element="IC1" pad="GND"/>
 <contactref element="TTL" pad="1"/>
 <contactref element="ESP8266-01" pad="7"/>
 <contactref element="PROG" pad="2"/>
 <contactref element="VIN" pad="2"/>
 <contactref element="JP2" pad="2"/>
 <contactref element="JP2" pad="3"/>
+<contactref element="IC1" pad="IN"/>
 </signal>
 <signal name="N$2">
 <contactref element="TTL" pad="2"/>
@@ -661,15 +658,15 @@ design rules under a new name.</description>
 <signal name="N$3">
 <contactref element="TTL" pad="3"/>
 <contactref element="ESP8266-01" pad="1"/>
-<wire x1="13.5" y1="8.39" x2="13.5" y2="11.2" width="0.254" layer="16"/>
-<wire x1="13.5" y1="11.2" x2="13" y2="11.7" width="0.254" layer="16"/>
-<wire x1="13" y1="11.7" x2="7" y2="11.7" width="0.254" layer="16"/>
+<wire x1="13.25" y1="8.39" x2="13.25" y2="11.2" width="0.254" layer="16"/>
+<wire x1="13.25" y1="11.2" x2="12.75" y2="11.7" width="0.254" layer="16"/>
+<wire x1="12.75" y1="11.7" x2="7" y2="11.7" width="0.254" layer="16"/>
 <wire x1="7" y1="11.7" x2="6.5" y2="11.2" width="0.254" layer="16"/>
 <wire x1="2.5" y1="8.73" x2="6" y2="8.73" width="0.254" layer="16"/>
 <wire x1="6" y1="8.73" x2="6.5" y2="9.23" width="0.254" layer="16"/>
 <wire x1="6.5" y1="9.23" x2="6.5" y2="11.2" width="0.254" layer="16"/>
-<wire x1="11.52" y1="7.89" x2="13" y2="7.89" width="0.254" layer="16"/>
-<wire x1="13" y1="7.89" x2="13.5" y2="8.39" width="0.254" layer="16"/>
+<wire x1="11.52" y1="7.89" x2="12.75" y2="7.89" width="0.254" layer="16"/>
+<wire x1="12.75" y1="7.89" x2="13.25" y2="8.39" width="0.254" layer="16"/>
 </signal>
 <signal name="N$4">
 <contactref element="ESP8266-01" pad="3"/>
@@ -677,59 +674,45 @@ design rules under a new name.</description>
 <wire x1="11.52" y1="10.43" x2="10.25" y2="9.16" width="0.254" layer="16"/>
 <wire x1="10.25" y1="9.16" x2="7.5" y2="9.16" width="0.254" layer="16"/>
 <wire x1="7.5" y1="9.16" x2="7" y2="8.66" width="0.254" layer="16"/>
-<wire x1="7" y1="8.66" x2="7" y2="5.2" width="0.254" layer="16"/>
+<wire x1="7" y1="8.66" x2="7" y2="2.65" width="0.254" layer="16"/>
 <contactref element="JP2" pad="4"/>
-<wire x1="7" y1="5.2" x2="7" y2="2.65" width="0.254" layer="16"/>
-<wire x1="15.27" y1="23.75" x2="19.23" y2="23.75" width="0.254" layer="16"/>
-<wire x1="19.23" y1="23.75" x2="19.73" y2="23.25" width="0.254" layer="16"/>
-<wire x1="19.73" y1="23.25" x2="19.73" y2="16.5" width="0.254" layer="16"/>
-<wire x1="19.73" y1="16.5" x2="19.23" y2="16" width="0.254" layer="16"/>
-<wire x1="19.23" y1="16" x2="16" y2="16" width="0.254" layer="16"/>
-<wire x1="16" y1="16" x2="15.5" y2="15.5" width="0.254" layer="16"/>
-<wire x1="15.5" y1="15.5" x2="15.5" y2="5.7" width="0.254" layer="16"/>
-<wire x1="15.5" y1="5.7" x2="15" y2="5.2" width="0.254" layer="16"/>
-<wire x1="15" y1="5.2" x2="7" y2="5.2" width="0.254" layer="16"/>
+<wire x1="15.27" y1="24" x2="14.01" y2="22.5" width="0.254" layer="16"/>
+<wire x1="14.01" y1="22.5" x2="14.01" y2="7" width="0.254" layer="16"/>
+<wire x1="14.01" y1="7" x2="13.51" y2="6.5" width="0.254" layer="16"/>
+<wire x1="13.51" y1="6.5" x2="10.75" y2="6.5" width="0.254" layer="16"/>
+<wire x1="10.75" y1="6.5" x2="10.25" y2="7" width="0.254" layer="16"/>
+<wire x1="10.25" y1="7" x2="10.25" y2="9.16" width="0.254" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="ESP8266-01" pad="2"/>
-<contactref element="IC1" pad="OUT"/>
-<wire x1="14" y1="6" x2="9.48" y2="6" width="0.4064" layer="16"/>
-<wire x1="9.48" y1="6" x2="8.98" y2="6.5" width="0.4064" layer="16"/>
-<wire x1="8.98" y1="6.5" x2="8.98" y2="7.89" width="0.4064" layer="16"/>
-<wire x1="14" y1="6" x2="14.5" y2="6.5" width="0.4064" layer="16"/>
-<wire x1="14.5" y1="6.5" x2="14.5" y2="16.5" width="0.4064" layer="16"/>
-<wire x1="14.5" y1="16.5" x2="15" y2="17" width="0.4064" layer="16"/>
-<wire x1="15" y1="17" x2="15.28" y2="17" width="0.4064" layer="16"/>
-<wire x1="15.28" y1="17" x2="17.96" y2="17" width="0.4064" layer="16"/>
-<wire x1="17.96" y1="17" x2="18.46" y2="17.5" width="0.4064" layer="16"/>
-<wire x1="18.46" y1="17.5" x2="18.46" y2="19.81" width="0.4064" layer="16"/>
+<wire x1="9.48" y1="5.75" x2="14.51" y2="5.75" width="0.4064" layer="16"/>
+<wire x1="14.51" y1="5.75" x2="15.01" y2="6.25" width="0.4064" layer="16"/>
+<wire x1="15.01" y1="6.25" x2="15.01" y2="16.73" width="0.4064" layer="16"/>
+<wire x1="9.48" y1="5.75" x2="8.98" y2="6.25" width="0.4064" layer="16"/>
+<wire x1="8.98" y1="6.25" x2="8.98" y2="7.89" width="0.4064" layer="16"/>
+<wire x1="15.01" y1="16.73" x2="15.28" y2="17" width="0.4064" layer="16"/>
 <contactref element="V-SEL1" pad="1"/>
 <wire x1="15.28" y1="19.75" x2="15.28" y2="17" width="0.254" layer="16"/>
+<contactref element="IC1" pad="GND"/>
+<wire x1="15.28" y1="17" x2="20.5" y2="17" width="0.4064" layer="16"/>
+<wire x1="20.5" y1="17" x2="21" y2="17.5" width="0.4064" layer="16"/>
+<wire x1="21" y1="17.5" x2="21" y2="19.81" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$5">
 <contactref element="TTL" pad="5"/>
 <contactref element="V-SEL" pad="1"/>
-<wire x1="2.58" y1="27.5" x2="1" y2="27.5" width="0.254" layer="16"/>
-<wire x1="1" y1="27.5" x2="0.5" y2="27" width="0.254" layer="16"/>
-<wire x1="0.5" y1="27" x2="0.5" y2="14.31" width="0.254" layer="16"/>
+<wire x1="2.58" y1="29" x2="1" y2="29" width="0.254" layer="16"/>
+<wire x1="1" y1="29" x2="0.5" y2="28.5" width="0.254" layer="16"/>
+<wire x1="0.5" y1="28.5" x2="0.5" y2="14.31" width="0.254" layer="16"/>
 <wire x1="0.5" y1="14.31" x2="1" y2="13.81" width="0.254" layer="16"/>
 <wire x1="1" y1="13.81" x2="2.5" y2="13.81" width="0.254" layer="16"/>
 <contactref element="TTL" pad="4"/>
 <wire x1="2.5" y1="13.81" x2="2.5" y2="11.27" width="0.254" layer="16"/>
 </signal>
-<signal name="N$6">
-<contactref element="V-SEL" pad="2"/>
-<contactref element="IC1" pad="IN"/>
-<wire x1="5.12" y1="27.5" x2="5.12" y2="29.6" width="0.4064" layer="16"/>
-<wire x1="5.12" y1="29.6" x2="5.62" y2="30.1" width="0.4064" layer="16"/>
-<wire x1="5.62" y1="30.1" x2="23.04" y2="30.1" width="0.4064" layer="16"/>
-<wire x1="23.54" y1="19.81" x2="23.54" y2="29.6" width="0.4064" layer="16"/>
-<wire x1="23.54" y1="29.6" x2="23.04" y2="30.1" width="0.4064" layer="16"/>
-</signal>
 <signal name="N$7">
 <contactref element="V-SEL" pad="3"/>
 <contactref element="VIN" pad="1"/>
-<wire x1="7.66" y1="27.5" x2="12.73" y2="27.5" width="0.4064" layer="16"/>
+<wire x1="7.66" y1="29" x2="24.5" y2="29.02" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$9">
 <contactref element="ESP8266-01" pad="5"/>
@@ -743,9 +726,9 @@ design rules under a new name.</description>
 <wire x1="10.2" y1="19.75" x2="10.2" y2="17.25" width="0.254" layer="16"/>
 <wire x1="10.2" y1="17.25" x2="5.25" y2="17.25" width="0.254" layer="16"/>
 <wire x1="5.25" y1="17.25" x2="4.75" y2="17.75" width="0.254" layer="16"/>
-<wire x1="4.75" y1="17.75" x2="4.75" y2="23.25" width="0.254" layer="16"/>
-<wire x1="4.75" y1="23.25" x2="5.25" y2="23.75" width="0.254" layer="16"/>
-<wire x1="5.25" y1="23.75" x2="7.65" y2="23.75" width="0.254" layer="16"/>
+<wire x1="4.75" y1="17.75" x2="4.75" y2="23.5" width="0.254" layer="16"/>
+<wire x1="4.75" y1="23.5" x2="5.25" y2="24" width="0.254" layer="16"/>
+<wire x1="5.25" y1="24" x2="7.65" y2="24" width="0.254" layer="16"/>
 </signal>
 <signal name="N$8">
 <contactref element="ESP8266-01" pad="6"/>
@@ -761,6 +744,15 @@ design rules under a new name.</description>
 <wire x1="6.75" y1="21.75" x2="12.24" y2="21.75" width="0.254" layer="16"/>
 <wire x1="12.24" y1="21.75" x2="12.74" y2="21.25" width="0.254" layer="16"/>
 <wire x1="12.74" y1="21.25" x2="12.74" y2="19.75" width="0.254" layer="16"/>
+</signal>
+<signal name="N$11">
+<contactref element="V-SEL" pad="2"/>
+<contactref element="IC1" pad="OUT"/>
+<wire x1="18.46" y1="19.81" x2="18.46" y2="26.25" width="0.4064" layer="16"/>
+<wire x1="18.46" y1="26.25" x2="17.96" y2="26.75" width="0.4064" layer="16"/>
+<wire x1="17.96" y1="26.75" x2="5.62" y2="26.75" width="0.4064" layer="16"/>
+<wire x1="5.62" y1="26.75" x2="5.12" y2="27.25" width="0.4064" layer="16"/>
+<wire x1="5.12" y1="27.25" x2="5.12" y2="29" width="0.4064" layer="16"/>
 </signal>
 </signals>
 </board>
