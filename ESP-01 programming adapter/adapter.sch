@@ -1389,7 +1389,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="AXIAL-0.3"/>
-<part name="V-SEL1" library="pinhead" deviceset="PINHD-1X3" device=""/>
+<part name="WIFI-SEL" library="pinhead" deviceset="PINHD-1X3" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -1411,7 +1411,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="GND6" gate="1" x="68.58" y="27.94"/>
 <instance part="GND7" gate="1" x="71.12" y="22.86"/>
 <instance part="R1" gate="G$1" x="45.72" y="30.48"/>
-<instance part="V-SEL1" gate="A" x="53.34" y="48.26" rot="R90"/>
+<instance part="WIFI-SEL" gate="A" x="53.34" y="48.26" rot="R90"/>
 <instance part="GND8" gate="1" x="17.78" y="30.48"/>
 </instances>
 <busses>
@@ -1472,17 +1472,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="55.88" y1="12.7" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="ESP8266-01" gate="A" pin="3"/>
-<pinref part="PROG" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="15.24" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="4"/>
-<wire x1="73.66" y1="15.24" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="35.56" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
-<junction x="73.66" y="15.24"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="ESP8266-01" gate="A" pin="2"/>
@@ -1490,7 +1479,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="35.56" y1="12.7" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="27.94" x2="35.56" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="38.1" x2="50.8" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="V-SEL1" gate="A" pin="1"/>
+<pinref part="WIFI-SEL" gate="A" pin="1"/>
 <wire x1="50.8" y1="38.1" x2="50.8" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="25.4" y1="33.02" x2="25.4" y2="27.94" width="0.1524" layer="91"/>
@@ -1525,12 +1514,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="ESP8266-01" gate="A" pin="5"/>
 <pinref part="JP2" gate="A" pin="1"/>
 <wire x1="50.8" y1="17.78" x2="66.04" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="17.78" x2="66.04" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="V-SEL1" gate="A" pin="3"/>
-<wire x1="66.04" y1="22.86" x2="66.04" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="22.86" x2="55.88" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="22.86" x2="55.88" y2="45.72" width="0.1524" layer="91"/>
-<junction x="66.04" y="22.86"/>
+<wire x1="66.04" y1="17.78" x2="66.04" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -1544,7 +1528,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="V-SEL1" gate="A" pin="2"/>
+<pinref part="WIFI-SEL" gate="A" pin="2"/>
 <wire x1="53.34" y1="45.72" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="53.34" y1="30.48" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
@@ -1558,6 +1542,23 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="IC1" gate="G$1" pin="OUT"/>
 <wire x1="15.24" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="45.72" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="WIFI-SEL" gate="A" pin="3"/>
+<wire x1="55.88" y1="27.94" x2="55.88" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="27.94" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="ESP8266-01" gate="A" pin="3"/>
+<pinref part="PROG" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="15.24" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="4"/>
+<wire x1="73.66" y1="15.24" x2="63.5" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="15.24" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="35.56" x2="73.66" y2="15.24" width="0.1524" layer="91"/>
+<junction x="73.66" y="15.24"/>
+<wire x1="63.5" y1="27.94" x2="63.5" y2="15.24" width="0.1524" layer="91"/>
+<junction x="63.5" y="15.24"/>
 </segment>
 </net>
 </nets>
